@@ -36,6 +36,7 @@ class _HesapState extends State<Hesap> {
       ),
       body: ListView(
         children: [
+          // Checkbox(value: value, onChanged: onChanged)
           Card(
             child: InkWell(
                 onTap: (() {

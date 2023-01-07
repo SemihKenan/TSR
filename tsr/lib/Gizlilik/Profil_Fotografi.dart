@@ -12,6 +12,10 @@ class profilfotografi extends StatefulWidget {
 
 class _profilfotografiState extends State<profilfotografi> {
   @override
+  bool? herkes_profil = false;
+  bool? kisiler_profil = true;
+  bool? secili_profil = false;
+  bool? hickimse_profil = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -36,28 +40,52 @@ class _profilfotografiState extends State<profilfotografi> {
             padding: EdgeInsets.all(13.0),
             child: Text('Profil Fotoğrafını Kimler Görebilir'),
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Herkes'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: herkes_profil,
+            onChanged: (bool? value) {
+              setState(() {
+                herkes_profil = value;
+              });
+            },
+            title: const Text("Herkes"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Kişiler'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: kisiler_profil,
+            onChanged: (bool? value) {
+              setState(() {
+                kisiler_profil = value;
+              });
+            },
+            title: const Text("Kişiler"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Seçili Olanlar'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: secili_profil,
+            onChanged: (bool? value) {
+              setState(() {
+                secili_profil = value;
+              });
+            },
+            title: const Text("Seçili Olanlar"),
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box),
-            title: Text('Hiç Kimse'),
-          )
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: hickimse_profil,
+            onChanged: (bool? value) {
+              setState(() {
+                hickimse_profil = value;
+              });
+            },
+            title: const Text("Hiçkimse"),
+          ),
         ],
       ),
     );

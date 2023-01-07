@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tsr/Gizlilik/Gizlilik.dart';
-import 'package:tsr/Screens/Sohbet.dart';
-import 'package:tsr/Screens/Tema.dart';
+import 'package:tsr/Sohbet/Sohbet.dart';
+import 'package:tsr/Tema/Tema.dart';
 import 'build_menu_item.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -23,57 +23,40 @@ class NavigationDrawer extends StatelessWidget {
           const Divider(
             color: Colors.white,
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                  child: const Text('Gizlilik',
-                      style: TextStyle(color: Colors.white, fontSize: 20)),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Hesap(),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                  child: const Text('Sohbetler',
-                      style: TextStyle(color: Colors.white, fontSize: 20)),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const sohbet(),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                  child: const Text(
-                    'Tema',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const tema(),
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Hesap()));
+                },
+                child: const Text('Gizlilik',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const sohbet()));
+                },
+                child: const Text('Sohbet',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const tema()));
+                },
+                child: const Text('Tema',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
+              ),
+            ],
           )
         ]),
       ),

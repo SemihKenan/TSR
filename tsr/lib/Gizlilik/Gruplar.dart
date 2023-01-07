@@ -6,13 +6,15 @@ import 'package:tsr/Gizlilik/Gizlilik.dart';
 
 class gruplar extends StatefulWidget {
   const gruplar({super.key});
-
   @override
   State<gruplar> createState() => _gruplarState();
 }
 
 class _gruplarState extends State<gruplar> {
   @override
+  bool? herkes_gruplar = false;
+  bool? kisiler_gruplar = true;
+  bool? secili_gruplar = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -37,26 +39,44 @@ class _gruplarState extends State<gruplar> {
             padding: EdgeInsets.all(13.0),
             child: Text('Beni Gruplara Kimler Ekleyebilir'),
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Herkes'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: herkes_gruplar,
+            onChanged: (bool? value) {
+              setState(() {
+                herkes_gruplar = value;
+              });
+            },
+            title: const Text("Herkes"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Kişiler'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: kisiler_gruplar,
+            onChanged: (bool? value) {
+              setState(() {
+                kisiler_gruplar = value;
+              });
+            },
+            title: const Text("Kişiler"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Seçili Olanlar'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: secili_gruplar,
+            onChanged: (bool? value) {
+              setState(() {
+                secili_gruplar = value;
+              });
+            },
+            title: const Text("Seçili Olanlar"),
           ),
-          Padding(
-            padding: const EdgeInsets.all(13.0),
+          const Padding(
+            padding: EdgeInsets.all(13.0),
             child: Text(
                 'Sizi gruplara ekleyemeyen yöneticiler, size özel olarak davet gönderecektir.'),
           )

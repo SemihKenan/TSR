@@ -4,16 +4,20 @@ Widget buildMenuItem({
   required String text,
   required String last_time,
   required String subtitle,
-  required AssetImage Avatar,
+  required AssetImage avatar,
 }) {
-  const color = Colors.white;
+  const color = Colors.black;
   const hoverColor = Colors.white70;
-  VoidCallback? onClicked;
-  return ListTile(
-    leading: CircleAvatar(backgroundImage: Avatar),
-    title: Text(text, style: const TextStyle(color: color)),
-    subtitle: Text(subtitle, style: TextStyle(color: Colors.white70)),
-    trailing: Text(last_time, style: TextStyle(color: Colors.white70)),
-    hoverColor: hoverColor,
+  return Card(
+    child: ListTile(
+      leading: CircleAvatar(
+          backgroundColor: Colors.black,
+          radius: 40,
+          child: CircleAvatar(radius: 23, backgroundImage: avatar)),
+      title: Text(text, style: const TextStyle(color: color)),
+      subtitle: Text(subtitle, style: const TextStyle(color: color)),
+      trailing: Text(last_time, style: const TextStyle(color: color)),
+      hoverColor: hoverColor,
+    ),
   );
 }

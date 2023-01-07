@@ -11,6 +11,12 @@ class songorulme extends StatefulWidget {
 
 class _songorulmeState extends State<songorulme> {
   @override
+  bool? herkes_songorulme = false;
+  bool? kisiler_songorulme = true;
+  bool? secili_songorulme = false;
+  bool? hickimse_songorulme = false;
+  bool? herkes_cevrimici = true;
+  bool? songorulme_cevrimici = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,46 +41,82 @@ class _songorulmeState extends State<songorulme> {
             padding: EdgeInsets.all(13.0),
             child: Text('Son Görülme Bilgimi Kimler Görebilir'),
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Herkes'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: herkes_songorulme,
+            onChanged: (bool? value) {
+              setState(() {
+                herkes_songorulme = value;
+              });
+            },
+            title: const Text("Herkes"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Kişiler'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: kisiler_songorulme,
+            onChanged: (bool? value) {
+              setState(() {
+                kisiler_songorulme = value;
+              });
+            },
+            title: const Text("Kişiler"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Seçili Olanlar'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: secili_songorulme,
+            onChanged: (bool? value) {
+              setState(() {
+                secili_songorulme = value;
+              });
+            },
+            title: const Text("Seçili Olanlar"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Gizli'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: hickimse_songorulme,
+            onChanged: (bool? value) {
+              setState(() {
+                hickimse_songorulme = value;
+              });
+            },
+            title: const Text("Gizli"),
           ),
           const Divider(),
           const Padding(
             padding: EdgeInsets.all(13.0),
             child: Text('Çevrimiçi Olduğumu Kimler Görebilir'),
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Herkes'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: herkes_cevrimici,
+            onChanged: (bool? value) {
+              setState(() {
+                herkes_cevrimici = value;
+              });
+            },
+            title: const Text("Herkes"),
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.check_box_rounded),
-            title: Text('Son Görülme ile Aynı'),
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: songorulme_cevrimici,
+            onChanged: (bool? value) {
+              setState(() {
+                songorulme_cevrimici = value;
+              });
+            },
+            title: const Text("Songörülme ile aynı"),
           ),
         ],
       ),
