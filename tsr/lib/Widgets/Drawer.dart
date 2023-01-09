@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:tsr/Gizlilik/Gizlilik.dart';
-import 'package:tsr/Sohbet/Sohbet.dart';
+import 'package:tsr/Bildirimler/Bildirimler.dart';
 import 'package:tsr/Tema/Tema.dart';
 import 'build_menu_item.dart';
 
-class NavigationDrawer extends StatelessWidget {
+class NavigationDrawer extends StatefulWidget {
+  @override
+  State<NavigationDrawer> createState() => _NavigationDrawerState();
+}
+
+class _NavigationDrawerState extends State<NavigationDrawer> {
   //const NavigationDrawer({super.key});
   final padding = const EdgeInsets.symmetric(horizontal: 20);
+  bool? acik;
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -39,10 +45,12 @@ class NavigationDrawer extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const sohbet()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Bildirimler()));
                 },
-                child: const Text('Sohbet',
+                child: const Text('Bildirimler',
                     style: TextStyle(color: Colors.white, fontSize: 20)),
               ),
               const SizedBox(

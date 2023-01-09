@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Screens/HomePage.dart';
-import 'package:tsr/Widgets/chat.dart';
 
-class mike extends StatefulWidget {
-  const mike({super.key});
+import '../Screens/HomePage.dart';
+
+class lucy extends StatefulWidget {
+  const lucy({super.key});
 
   @override
-  State<mike> createState() => _mikeState();
+  State<lucy> createState() => _lucyState();
 }
 
-class _mikeState extends State<mike> {
+class _lucyState extends State<lucy> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,15 +34,15 @@ class _mikeState extends State<mike> {
               const Padding(
                 padding: EdgeInsets.only(right: 20.0),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('images/photo1.jpg'),
+                  backgroundImage: AssetImage('images/photo.png'),
                 ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  const Text('Mike', style: TextStyle(fontSize: 15)),
-                  const Text('Son Görülme: 6 dakika önce',
+                  const Text('Lucy', style: TextStyle(fontSize: 15)),
+                  const Text('Son Görülme: 10.57 ',
                       style: TextStyle(fontSize: 10)),
                 ],
               ),

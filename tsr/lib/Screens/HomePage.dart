@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Chats'),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.chat)),
           const Padding(

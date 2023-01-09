@@ -50,9 +50,6 @@ class _profilfotografiState extends State<profilfotografi> {
             },
             title: const Text("Herkes"),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           CheckboxListTile(
             //checkbox positioned at right
             value: kisiler_profil,
@@ -62,9 +59,6 @@ class _profilfotografiState extends State<profilfotografi> {
               });
             },
             title: const Text("Kişiler"),
-          ),
-          const SizedBox(
-            height: 10,
           ),
           CheckboxListTile(
             //checkbox positioned at right

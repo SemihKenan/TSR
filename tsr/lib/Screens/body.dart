@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tsr/Chats/Mike.dart';
+import 'package:tsr/Chats/carol.dart';
+import 'package:tsr/Chats/jake.dart';
+import 'package:tsr/Chats/kevin.dart';
+import 'package:tsr/Chats/lucy.dart';
+import 'package:tsr/Chats/nancy.dart';
 import 'package:tsr/Widgets/build_menu_item.dart';
 
 class body extends StatefulWidget {
@@ -41,14 +46,14 @@ class _bodyState extends State<body> {
           child: buildMenuItem(
             text: 'Kevin',
             subtitle: 'hi',
-            last_time: '12.20',
+            last_time: '16.34',
             avatar: const AssetImage('images/photo3.png'),
           ),
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const kevin(),
               ),
             );
           },
@@ -60,13 +65,13 @@ class _bodyState extends State<body> {
           child: buildMenuItem(
               text: 'Lucy',
               subtitle: 'hi',
-              last_time: '12.20',
+              last_time: '11.43',
               avatar: const AssetImage('images/photo.png')),
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const lucy(),
               ),
             );
           },
@@ -84,7 +89,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const nancy(),
               ),
             );
           },
@@ -96,13 +101,13 @@ class _bodyState extends State<body> {
           child: buildMenuItem(
               text: 'Jake',
               subtitle: 'hi',
-              last_time: '12.20',
+              last_time: '11.09',
               avatar: const AssetImage('images/photo4.jpg')),
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const jake(),
               ),
             );
           },
@@ -114,13 +119,13 @@ class _bodyState extends State<body> {
           child: buildMenuItem(
               text: 'Carol',
               subtitle: 'hi',
-              last_time: '12.20',
+              last_time: '08.40',
               avatar: const AssetImage('images/photo6.jpg')),
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const carol(),
               ),
             );
           },
