@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Chats/Mike.dart';
-import 'package:tsr/Chats/carol.dart';
-import 'package:tsr/Chats/jake.dart';
-import 'package:tsr/Chats/kevin.dart';
-import 'package:tsr/Chats/lucy.dart';
-import 'package:tsr/Chats/nancy.dart';
-import 'package:tsr/Widgets/build_menu_item.dart';
 
-class body extends StatefulWidget {
-  const body({super.key});
+import 'package:tsr/mobile_version/Chats/Mike.dart';
+import 'package:tsr/mobile_version/Chats/carol.dart';
+import 'package:tsr/mobile_version/Chats/kevin.dart';
+import 'package:tsr/mobile_version/Chats/lucy.dart';
+import 'package:tsr/mobile_version/Chats/nancy.dart';
+import '../../Widgets/build_menu_item.dart';
+import '../Chats/jake.dart';
+
+class mobile_body extends StatefulWidget {
+  const mobile_body({super.key});
 
   @override
-  State<body> createState() => _bodyState();
+  State<mobile_body> createState() => _mobile_bodyState();
 }
 
-class _bodyState extends State<body> {
+class _mobile_bodyState extends State<mobile_body> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         const Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.only(top: 5),
         ),
         InkWell(
           focusColor: Colors.black,
@@ -28,7 +29,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const mike(),
+                builder: (context) => const mike_mobile(),
               ),
             );
           },
@@ -53,7 +54,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const kevin(),
+                builder: (context) => const kevin_mobile(),
               ),
             );
           },
@@ -71,7 +72,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const lucy(),
+                builder: (context) => const lucy_mobile(),
               ),
             );
           },
@@ -89,7 +90,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const nancy(),
+                builder: (context) => const nancy_mobile(),
               ),
             );
           },
@@ -107,7 +108,7 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const jake(),
+                builder: (context) => const jake_mobile(),
               ),
             );
           },
@@ -125,10 +126,22 @@ class _bodyState extends State<body> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const carol(),
+                builder: (context) => const carol_mobile(),
               ),
             );
           },
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0, right: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                child: Icon(Icons.message),
+                onPressed: () {},
+              ),
+            ],
+          ),
         ),
       ],
     );

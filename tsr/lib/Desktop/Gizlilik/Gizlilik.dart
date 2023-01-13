@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Chats/Mike.dart';
-import 'package:tsr/Gizlilik/Gruplar.dart';
-import 'package:tsr/Gizlilik/Hakkimda.dart';
-import 'package:tsr/Gizlilik/Profil_Fotografi.dart';
-import 'package:tsr/Gizlilik/son_g%C3%B6r%C3%BClme.dart';
-import 'package:tsr/Screens/HomePage.dart';
+import 'package:tsr/Desktop/Chats/Mike.dart';
+import 'package:tsr/Desktop/Gizlilik/Gruplar.dart';
+import 'package:tsr/Desktop/Gizlilik/Hakkimda.dart';
+import 'package:tsr/Desktop/Gizlilik/Profil_Fotografi.dart';
+import 'package:tsr/Desktop/Gizlilik/son_g%C3%B6r%C3%BClme.dart';
+import 'package:tsr/Desktop/Screens/HomePage.dart';
 import 'package:tsr/Widgets/Ayarlar.dart';
 import 'package:tsr/Widgets/chat.dart';
 

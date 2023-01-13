@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Gizlilik/Gizlilik.dart';
-import 'package:tsr/Screens/HomePage.dart';
+import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Screens/HomePage.dart';
 
 class songorulme extends StatefulWidget {
   const songorulme({super.key});

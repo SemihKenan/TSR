@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
 
-class gruplar extends StatefulWidget {
-  const gruplar({super.key});
+class profilfotografi extends StatefulWidget {
+  const profilfotografi({super.key});
+
   @override
-  State<gruplar> createState() => _gruplarState();
+  State<profilfotografi> createState() => _profilfotografiState();
 }
 
-class _gruplarState extends State<gruplar> {
+class _profilfotografiState extends State<profilfotografi> {
   @override
-  bool? herkes_gruplar = false;
-  bool? kisiler_gruplar = true;
-  bool? secili_gruplar = false;
+  bool? herkes_profil = false;
+  bool? kisiler_profil = true;
+  bool? secili_profil = false;
+  bool? hickimse_profil = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -29,7 +30,7 @@ class _gruplarState extends State<gruplar> {
           },
           icon: const Icon(Icons.arrow_back),
         ),
-        title: const Text('Gruplar'),
+        title: const Text('Profil Fotoğrafi'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,49 +38,48 @@ class _gruplarState extends State<gruplar> {
         children: [
           const Padding(
             padding: EdgeInsets.all(13.0),
-            child: Text('Beni Gruplara Kimler Ekleyebilir'),
+            child: Text('Profil Fotoğrafını Kimler Görebilir'),
           ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: herkes_gruplar,
+            value: herkes_profil,
             onChanged: (bool? value) {
               setState(() {
-                herkes_gruplar = value;
+                herkes_profil = value;
               });
             },
             title: const Text("Herkes"),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: kisiler_gruplar,
+            value: kisiler_profil,
             onChanged: (bool? value) {
               setState(() {
-                kisiler_gruplar = value;
+                kisiler_profil = value;
               });
             },
             title: const Text("Kişiler"),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: secili_gruplar,
+            value: secili_profil,
             onChanged: (bool? value) {
               setState(() {
-                secili_gruplar = value;
+                secili_profil = value;
               });
             },
             title: const Text("Seçili Olanlar"),
           ),
-          const Padding(
-            padding: EdgeInsets.all(13.0),
-            child: Text(
-                'Sizi gruplara ekleyemeyen yöneticiler, size özel olarak davet gönderecektir.'),
-          )
+          CheckboxListTile(
+            //checkbox positioned at right
+            value: hickimse_profil,
+            onChanged: (bool? value) {
+              setState(() {
+                hickimse_profil = value;
+              });
+            },
+            title: const Text("Hiçkimse"),
+          ),
         ],
       ),
     );

@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
 
-class profilfotografi extends StatefulWidget {
-  const profilfotografi({super.key});
-
+class hakkimda extends StatefulWidget {
+  const hakkimda({super.key});
   @override
-  State<profilfotografi> createState() => _profilfotografiState();
+  State<hakkimda> createState() => _hakkimdaState();
 }
 
-class _profilfotografiState extends State<profilfotografi> {
+class _hakkimdaState extends State<hakkimda> {
   @override
-  bool? herkes_profil = false;
-  bool? kisiler_profil = true;
-  bool? secili_profil = false;
-  bool? hickimse_profil = false;
+  bool? herkes = false;
+  bool? kisiler = true;
+  bool? secili = false;
+  bool? hickimse = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -30,7 +27,7 @@ class _profilfotografiState extends State<profilfotografi> {
           },
           icon: const Icon(Icons.arrow_back),
         ),
-        title: const Text('Profil Fotoğrafi'),
+        title: const Text('Hakkımda'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,47 +35,53 @@ class _profilfotografiState extends State<profilfotografi> {
         children: [
           const Padding(
             padding: EdgeInsets.all(13.0),
-            child: Text('Profil Fotoğrafını Kimler Görebilir'),
+            child: Text('Hakkımda Bilgimi Kimler Görebilir'),
           ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: herkes_profil,
+            value: herkes,
             onChanged: (bool? value) {
               setState(() {
-                herkes_profil = value;
+                herkes = value;
               });
             },
-            title: const Text("Herkes"),
+            title: Text("Herkes"),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: kisiler_profil,
+            value: kisiler,
             onChanged: (bool? value) {
               setState(() {
-                kisiler_profil = value;
+                kisiler = value;
               });
             },
-            title: const Text("Kişiler"),
+            title: Text("Kişiler"),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: secili_profil,
+            value: secili,
             onChanged: (bool? value) {
               setState(() {
-                secili_profil = value;
+                secili = value;
               });
             },
-            title: const Text("Seçili Olanlar"),
+            title: Text("Seçili Olanlar"),
           ),
           CheckboxListTile(
             //checkbox positioned at right
-            value: hickimse_profil,
+            value: hickimse,
             onChanged: (bool? value) {
               setState(() {
-                hickimse_profil = value;
+                hickimse = value;
               });
             },
-            title: const Text("Hiçkimse"),
+            title: Text("Hiç kimse"),
           ),
         ],
       ),

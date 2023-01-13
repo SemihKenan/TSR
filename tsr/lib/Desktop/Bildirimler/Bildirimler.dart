@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Screens/HomePage.dart';
+import 'package:tsr/Desktop/Screens/HomePage.dart';
 
 class Bildirimler extends StatefulWidget {
   const Bildirimler({super.key});
@@ -51,20 +51,20 @@ class _BildirimlerState extends State<Bildirimler> {
             Divider(),
             CheckboxListTile(
               //checkbox positioned at right
-              value: mesaj,
+              value: onizleme,
               onChanged: (bool? value) {
                 setState(() {
-                  mesaj = value;
+                  onizleme = value;
                 });
               },
               title: const Text("Önizlemeleri göster"),
             ),
             CheckboxListTile(
               //checkbox positioned at right
-              value: mesaj,
+              value: ifade,
               onChanged: (bool? value) {
                 setState(() {
-                  mesaj = value;
+                  ifade = value;
                 });
               },
               title: const Text("İfade bildirimlerini göster"),

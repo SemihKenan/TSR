@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
-import 'package:tsr/Desktop/Bildirimler/Bildirimler.dart';
-import 'package:tsr/Desktop/Tema/Tema.dart';
-import 'build_menu_item.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/gizlilik_mobil.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_mobile.dart';
+import 'package:tsr/mobile_version/Ayarlar/Sohbet_mobile/sohbet_mobile.dart';
 
-class NavigationDrawer extends StatefulWidget {
+class mobile_drawer extends StatefulWidget {
+  const mobile_drawer({super.key});
+
   @override
-  State<NavigationDrawer> createState() => _NavigationDrawerState();
+  State<mobile_drawer> createState() => _mobile_drawerState();
 }
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
-  //const NavigationDrawer({super.key});
-  final padding = const EdgeInsets.symmetric(horizontal: 20);
+class _mobile_drawerState extends State<mobile_drawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -33,8 +34,23 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             children: [
               TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Hesap()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const hesap_mobile()));
+                },
+                child: const Text('Hesap',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const gizlilikmobile()));
                 },
                 child: const Text('Gizlilik',
                     style: TextStyle(color: Colors.white, fontSize: 20)),
@@ -47,20 +63,9 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Bildirimler()));
+                          builder: (context) => const sohbet_mobile()));
                 },
-                child: const Text('Bildirimler',
-                    style: TextStyle(color: Colors.white, fontSize: 20)),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const tema()));
-                },
-                child: const Text('Tema',
+                child: const Text('Sohbetler',
                     style: TextStyle(color: Colors.white, fontSize: 20)),
               ),
             ],
