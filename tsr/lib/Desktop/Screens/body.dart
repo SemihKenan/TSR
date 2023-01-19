@@ -19,9 +19,6 @@ class _bodyState extends State<body> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.all(20.0),
-        ),
         InkWell(
           focusColor: Colors.black,
           onTap: () {

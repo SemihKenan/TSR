@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:tsr/mobile_version/Chats/Mike.dart';
 import 'package:tsr/mobile_version/Chats/carol.dart';
 import 'package:tsr/mobile_version/Chats/kevin.dart';
@@ -18,7 +17,7 @@ class mobile_body extends StatefulWidget {
 class _mobile_bodyState extends State<mobile_body> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         const Padding(
           padding: EdgeInsets.only(top: 5),

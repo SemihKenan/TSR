@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Desktop/Screens/body.dart';
+import 'package:tsr/Desktop/Screens/Status.dart';
 import 'package:tsr/Widgets/Drawer.dart';
 import 'package:tsr/Widgets/drawer_mobile.dart';
 import 'package:tsr/mobile_version/Screens/mobile_body.dart';
@@ -16,16 +14,27 @@ class homepage_mobile extends StatefulWidget {
 class _homepage_mobileState extends State<homepage_mobile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Whatsapp'),
-        actions: [
-          IconButton(onPressed: (() {}), icon: Icon(Icons.camera_alt)),
-          IconButton(onPressed: (() {}), icon: Icon(Icons.search))
-        ],
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('TSR'),
+          actions: [
+            IconButton(onPressed: (() {}), icon: const Icon(Icons.camera_alt)),
+            IconButton(onPressed: (() {}), icon: const Icon(Icons.search)),
+          ],
+          bottom: const TabBar(tabs: [
+            Tab(
+              child: Text('Chats'),
+            ),
+            Tab(
+              child: Text('Status'),
+            )
+          ]),
+        ),
+        body: const TabBarView(children: [mobile_body(), status()]),
+        drawer: const mobile_drawer(),
       ),
-      body: mobile_body(),
-      drawer: mobile_drawer(),
     );
   }
 }

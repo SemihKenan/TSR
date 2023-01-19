@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tsr/Desktop/Chats/Mike.dart';
+import 'package:tsr/Desktop/Screens/Status.dart';
 import 'package:tsr/Desktop/Screens/body.dart';
 import 'package:tsr/Widgets/Drawer.dart';
+import 'package:tsr/mobile_version/Screens/mobile_body.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,8 +17,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chats'),
+        title: const Text('TSR'),
         actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const status(),
+                    ));
+              },
+              icon: const Icon(Icons.radio_button_off)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.chat)),
           const Padding(
             padding: EdgeInsets.all(8.0),
@@ -26,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: const body(),
+      body: body(),
       drawer: NavigationDrawer(),
     );
   }
