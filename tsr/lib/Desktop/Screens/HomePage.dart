@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Chats/Mike.dart';
-import 'package:tsr/Desktop/Screens/Status.dart';
+import 'package:tsr/mobile_version/Screens/Status.dart';
 import 'package:tsr/Desktop/Screens/body.dart';
 import 'package:tsr/Widgets/Drawer.dart';
-import 'package:tsr/mobile_version/Screens/mobile_body.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

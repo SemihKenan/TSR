@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Screens/Status.dart';
-import 'package:tsr/Widgets/Drawer.dart';
+import 'package:tsr/mobile_version/Screens/Status.dart';
 import 'package:tsr/Widgets/drawer_mobile.dart';
 import 'package:tsr/mobile_version/Screens/mobile_body.dart';
 

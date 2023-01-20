@@ -7,7 +7,6 @@ Widget buildMenuItem({
   required AssetImage avatar,
 }) {
   const color = Colors.black;
-  const hoverColor = Colors.white70;
   return Card(
     child: ListTile(
       leading: CircleAvatar(
@@ -17,7 +16,6 @@ Widget buildMenuItem({
       title: Text(text, style: const TextStyle(color: color)),
       subtitle: Text(subtitle, style: const TextStyle(color: color)),
       trailing: Text(last_time, style: const TextStyle(color: color)),
-      hoverColor: hoverColor,
     ),
   );
 }

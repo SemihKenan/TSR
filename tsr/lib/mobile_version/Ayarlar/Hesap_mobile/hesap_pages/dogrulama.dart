@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../Hesap_mobile/hesap_mobile.dart';
+import '../hesap_mobile.dart';
 
 class dogrulama extends StatefulWidget {
   const dogrulama({super.key});

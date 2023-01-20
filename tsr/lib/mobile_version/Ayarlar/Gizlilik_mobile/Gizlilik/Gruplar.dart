@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/gizlilik_mobil.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_mobile.dart';
 
 class gruplar extends StatefulWidget {
   const gruplar({super.key});
@@ -23,7 +25,7 @@ class _gruplarState extends State<gruplar> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Hesap(),
+                builder: (context) => const gizlilikmobile(),
               ),
             );
           },

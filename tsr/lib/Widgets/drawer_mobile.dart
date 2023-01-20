@@ -17,7 +17,7 @@ class _mobile_drawerState extends State<mobile_drawer> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Colors.lime,
+        color: Colors.green,
         child: ListView(children: [
           const Padding(
             padding: EdgeInsets.only(top: 10, left: 30.0),
@@ -57,16 +57,6 @@ class _mobile_drawerState extends State<mobile_drawer> {
               ),
               const SizedBox(
                 height: 10,
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const sohbet_mobile()));
-                },
-                child: const Text('Sohbetler',
-                    style: TextStyle(color: Colors.white, fontSize: 20)),
               ),
             ],
           )

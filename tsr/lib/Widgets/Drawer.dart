@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik.dart';
 import 'package:tsr/Desktop/Bildirimler/Bildirimler.dart';
 import 'package:tsr/Desktop/Tema/Tema.dart';
 import 'build_menu_item.dart';

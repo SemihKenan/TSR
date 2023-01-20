@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_mobile.dart';
+
+import '../gizlilik_mobil.dart';
 
 class profilfotografi extends StatefulWidget {
   const profilfotografi({super.key});
@@ -24,7 +27,7 @@ class _profilfotografiState extends State<profilfotografi> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Hesap(),
+                builder: (context) => const gizlilikmobile(),
               ),
             );
           },

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/gizlilik_mobil.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_mobile.dart';
 
 class hakkimda extends StatefulWidget {
   const hakkimda({super.key});
@@ -21,7 +23,7 @@ class _hakkimdaState extends State<hakkimda> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Hesap(),
+                builder: (context) => const gizlilikmobile(),
               ),
             );
           },

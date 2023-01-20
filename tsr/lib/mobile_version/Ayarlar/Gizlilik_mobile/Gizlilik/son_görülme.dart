@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tsr/Desktop/Gizlilik/Gizlilik.dart';
+import 'package:tsr/Desktop/Gizlilik.dart';
 import 'package:tsr/Desktop/Screens/HomePage.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/gizlilik_mobil.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_mobile.dart';
 
 class songorulme extends StatefulWidget {
   const songorulme({super.key});
@@ -25,7 +27,7 @@ class _songorulmeState extends State<songorulme> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Hesap(),
+                builder: (context) => const gizlilikmobile(),
               ),
             );
           },
@@ -35,14 +37,12 @@ class _songorulmeState extends State<songorulme> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        // ignore: prefer_const_literals_to_create_immutables
         children: [
           const Padding(
             padding: EdgeInsets.all(13.0),
             child: Text('Son Görülme Bilgimi Kimler Görebilir'),
           ),
           CheckboxListTile(
-            //checkbox positioned at right
             value: herkes_songorulme,
             onChanged: (bool? value) {
               setState(() {
@@ -55,7 +55,6 @@ class _songorulmeState extends State<songorulme> {
             height: 10,
           ),
           CheckboxListTile(
-            //checkbox positioned at right
             value: kisiler_songorulme,
             onChanged: (bool? value) {
               setState(() {
@@ -68,7 +67,6 @@ class _songorulmeState extends State<songorulme> {
             height: 10,
           ),
           CheckboxListTile(
-            //checkbox positioned at right
             value: secili_songorulme,
             onChanged: (bool? value) {
               setState(() {
@@ -81,7 +79,6 @@ class _songorulmeState extends State<songorulme> {
             height: 10,
           ),
           CheckboxListTile(
-            //checkbox positioned at right
             value: hickimse_songorulme,
             onChanged: (bool? value) {
               setState(() {

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:tsr/Widgets/mobilhesap.dart';
-import 'package:tsr/mobile_version/Ayarlar/hesap_pages/bilgi_talerp.dart';
-import 'package:tsr/mobile_version/Ayarlar/hesap_pages/dogrulama.dart';
-import 'package:tsr/mobile_version/Ayarlar/hesap_pages/guvenlik.dart';
-import 'package:tsr/mobile_version/Ayarlar/hesap_pages/hesab%C4%B1m%C4%B1_sil.dart';
-import 'package:tsr/mobile_version/Ayarlar/hesap_pages/numara_degistir.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_pages/bilgi_talerp.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_pages/dogrulama.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_pages/guvenlik.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_pages/hesab%C4%B1m%C4%B1_sil.dart';
+import 'package:tsr/mobile_version/Ayarlar/Hesap_mobile/hesap_pages/numara_degistir.dart';
 import 'package:tsr/mobile_version/Screens/homepage_mobile.dart';
 
 class hesap_mobile extends StatefulWidget {
@@ -36,7 +34,6 @@ class _hesap_mobileState extends State<hesap_mobile> {
       ),
       body: ListView(
         children: [
-          // Checkbox(value: value, onChanged: onChanged)
           InkWell(
               onTap: (() {
                 Navigator.push(
@@ -76,7 +73,6 @@ class _hesap_mobileState extends State<hesap_mobile> {
                   ikon: const Icon(Icons.phonelink_setup_sharp),
                   yazimiz: 'Numara Değiştir',
                   renk: Colors.black)),
-
           InkWell(
               onTap: (() {
                 Navigator.push(
@@ -101,7 +97,7 @@ class _hesap_mobileState extends State<hesap_mobile> {
               }),
               child: hesap(
                   ikon: const Icon(Icons.delete),
-                  yazimiz: 'Hesabmı Sil',
+                  yazimiz: 'Hesabımı Sil',
                   renk: Colors.red)),
         ],
       ),

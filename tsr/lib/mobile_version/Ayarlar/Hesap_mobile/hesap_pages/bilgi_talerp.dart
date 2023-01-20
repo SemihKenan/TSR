@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../Hesap_mobile/hesap_mobile.dart';
+import '../hesap_mobile.dart';
 
 class bilgi_talep extends StatefulWidget {
   const bilgi_talep({super.key});

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tsr/Desktop/Chats/Mike.dart';
-import 'package:tsr/Desktop/Gizlilik/Gruplar.dart';
-import 'package:tsr/Desktop/Gizlilik/Hakkimda.dart';
-import 'package:tsr/Desktop/Gizlilik/Profil_Fotografi.dart';
-import 'package:tsr/Desktop/Gizlilik/son_g%C3%B6r%C3%BClme.dart';
-import 'package:tsr/Desktop/Screens/HomePage.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/Gizlilik/Gruplar.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/Gizlilik/Hakkimda.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/Gizlilik/Profil_Fotografi.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/Gizlilik/son_g%C3%B6r%C3%BClme.dart';
 import 'package:tsr/Widgets/Ayarlar.dart';
-import 'package:tsr/Widgets/chat.dart';
+import 'package:tsr/mobile_version/Screens/homepage_mobile.dart';
 
 class Hesap extends StatefulWidget {
   const Hesap({super.key});
@@ -26,7 +25,7 @@ class _HesapState extends State<Hesap> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) => const homepage_mobile(),
               ),
             );
           },
@@ -36,7 +35,6 @@ class _HesapState extends State<Hesap> {
       ),
       body: ListView(
         children: [
-          // Checkbox(value: value, onChanged: onChanged)
           Card(
             child: InkWell(
                 onTap: (() {

@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:tsr/Widgets/mobilhesap.dart';
 
-import '../Hesap_mobile/hesap_mobile.dart';
+import '../hesap_mobile.dart';
 
 class hesap_sil extends StatefulWidget {
   const hesap_sil({super.key});

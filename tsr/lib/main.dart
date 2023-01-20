@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tsr/Desktop/Screens/HomePage.dart';
+import 'package:tsr/mobile_version/Ayarlar/Gizlilik_mobile/gizlilik_mobil.dart';
+import 'package:tsr/mobile_version/Screens/homepage_mobile.dart';
+import 'package:tsr/mobile_version/Screens/mobile_body.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const HomePage(),
+      home: const homepage_mobile(),
     );
   }
 }
