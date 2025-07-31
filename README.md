@@ -1,5 +1,5 @@
 # TSR
-fluter proje
+Yaptığımız Flutter Whatsapp Clone UI projesi 
 
 Developers:
 
